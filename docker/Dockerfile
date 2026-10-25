@@ -25,7 +25,8 @@ COPY . .
 ARG BUILD_COMMIT=""
 RUN node tools/build/inject-build-commit.mjs
 
-RUN pnpm nx build web --configuration=pwa
+ARG PWA_BASE_HREF=/
+RUN pnpm nx build web --configuration=pwa --base-href="${PWA_BASE_HREF}"
 RUN pnpm nx build web-backend
 
 FROM node:24-alpine

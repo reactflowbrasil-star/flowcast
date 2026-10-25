@@ -250,6 +250,12 @@ Default runtime values:
 - `IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS=0`
 - `NODE_EXTRA_CA_CERTS` unset
 
+Docker builds accept `PWA_BASE_HREF` as a build argument (default `/`). For a
+reverse proxy that preserves the `/flowcast/` path prefix, set the build
+argument to `/flowcast/` and runtime `BACKEND_URL` to `/flowcast/api`. nginx
+strips that prefix before serving the PWA or proxying requests. `CLIENT_URL`
+remains the origin only, without a path.
+
 When hosting behind another domain, set `CLIENT_URL` to the browser origin and
 keep `BACKEND_URL=/api` unless the reverse proxy exposes the backend elsewhere.
 Only set `IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS=1` when the self-hosted

@@ -27,6 +27,15 @@ That means:
 - Electron-only features such as the download manager, external-player process
   control, and remote-control integrations are outside this runtime.
 
+### Hosting under a path prefix
+
+The image can serve the PWA below `/flowcast/` when the reverse proxy preserves
+that prefix. Set the build argument `PWA_BASE_HREF=/flowcast/` and runtime
+`BACKEND_URL=/flowcast/api`. nginx removes the prefix before serving static
+files or proxying API calls. Set `CLIENT_URL` to the public origin (for example,
+`https://app.example.com`); CORS origins do not include URL paths. Leave
+`PWA_BASE_HREF=/` and `BACKEND_URL=/api` for root-path deployments.
+
 ## Run With Docker Compose
 
 From the repository root:
