@@ -21,6 +21,9 @@ This document records the current contract for embedded playback in portal detai
   launches MPV/VLC only and does not open an embedded-player dialog.
 - Browser-player failures are diagnosed client-side and produce ranked,
   user-triggered recovery actions without changing the saved player setting.
+- HLS.js uses a 45-second forward-buffer target capped at 48 MB and conservative
+  bandwidth headroom for up-switches, reducing rebuffering on variable links
+  while retaining adaptive quality selection.
 
 ## Scope
 
