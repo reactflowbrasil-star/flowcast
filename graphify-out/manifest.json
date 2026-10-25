@@ -6797,10 +6797,10 @@
     "semantic_hash": "a02cdad7169efc56c435f89ef811083a"
   },
   "docker/docker-compose.yml": {
-    "mtime": 1792957389.511222,
-    "seen": 1792961202.7982414,
-    "ast_hash": "503790c962dd93fa1818ef29b4ea8dbc",
-    "semantic_hash": "503790c962dd93fa1818ef29b4ea8dbc"
+    "mtime": 1792964236.9861147,
+    "seen": 1792966365.1153634,
+    "ast_hash": "d5ae02fb5a0a9088df07c92068807918",
+    "semantic_hash": ""
   },
   "docker/docker-entrypoint.sh": {
     "mtime": 1792957389.5182366,
@@ -18453,9 +18453,9 @@
     "semantic_hash": ""
   },
   "docker/README.md": {
-    "mtime": 1792957389.5085256,
-    "seen": 1792961509.125422,
-    "ast_hash": "89ad9f5b546f8e7982d7be0f81624ccf",
+    "mtime": 1792964240.685356,
+    "seen": 1792966365.4616888,
+    "ast_hash": "d7a0f431dfd15ec37fbdda79b778f7c6",
     "semantic_hash": ""
   },
   "docs/architecture/category-management.md": {
@@ -18549,9 +18549,9 @@
     "semantic_hash": ""
   },
   "docs/architecture/pwa-self-hosted.md": {
-    "mtime": 1792957389.612941,
-    "seen": 1792961509.1254487,
-    "ast_hash": "f3840a9a143e0eb53d51feda7e0b2ce2",
+    "mtime": 1792964240.6941972,
+    "seen": 1792966365.464863,
+    "ast_hash": "666605e9318e6c8a9dca06743eda02b5",
     "semantic_hash": ""
   },
   "docs/architecture/release-pipeline.md": {
@@ -21186,6 +21186,12 @@
     "mtime": 1792957376.5204015,
     "seen": 1792961509.1261384,
     "ast_hash": "64949045da9f637858da909872d62c17",
+    "semantic_hash": ""
+  },
+  ".changes/docker-pwa-path-prefix.md": {
+    "mtime": 1792964240.6941972,
+    "seen": 1792966365.4504988,
+    "ast_hash": "4cdfb6751b05207976c81e2955a3031a",
     "semantic_hash": ""
   }
 }

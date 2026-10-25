@@ -1,0 +1,1 @@
+{"nodes": [{"id": "$graphify-root$_changes_docker_pwa_path_prefix_md", "label": "docker-pwa-path-prefix.md", "file_type": "document", "node_kind": "page", "source_file": ".changes/docker-pwa-path-prefix.md", "source_location": "L1", "frontmatter": {"type": "fix", "area": "docker"}}], "edges": [], "raw_calls": [], "input_tokens": 0, "output_tokens": 0}
