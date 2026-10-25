@@ -5,12 +5,14 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      args:
+        PWA_BASE_HREF: ${PWA_BASE_HREF:-/}
     restart: unless-stopped
     ports:
       - "4333:80"
     environment:
-      BACKEND_URL: /api
-      CLIENT_URL: http://localhost:4333
+      BACKEND_URL: ${BACKEND_URL:-/api}
+      CLIENT_URL: ${CLIENT_URL:-http://localhost:4333}
       PORT: "3000"
       IPTVNATOR_PROXY_ALLOW_PRIVATE_NETWORKS: "0"
     healthcheck:
@@ -19,3 +21,4 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
+
