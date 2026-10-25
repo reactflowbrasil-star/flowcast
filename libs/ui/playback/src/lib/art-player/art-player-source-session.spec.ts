@@ -99,6 +99,39 @@ describe('ArtPlayerSourceSession', () => {
         expect(attach).not.toHaveBeenCalled();
     });
 
+    it('falls back to native HLS when the manifest request has no HTTP response', () => {
+        const emitted: PlaybackDiagnostic[] = [];
+        const { session, player, video } = createSession({
+            sharedControls: true,
+            emitPlaybackIssue: (issue) => emitted.push(issue),
+        });
+        Object.defineProperty(video, 'canPlayType', {
+            configurable: true,
+            value: jest.fn(() => 'maybe'),
+        });
+        const play = jest
+            .spyOn(video, 'play')
+            .mockResolvedValue(undefined);
+        session.attach(player);
+        session.customType['m3u8']?.(
+            video,
+            'https://example.test/live.m3u8',
+            player
+        );
+
+        hlsInstances[0].emit(MockHls.Events.ERROR, null, {
+            type: 'networkError',
+            details: 'manifestLoadError',
+            fatal: true,
+            response: { code: 0 },
+        });
+
+        expect(video.src).toBe('https://example.test/live.m3u8');
+        expect(play).toHaveBeenCalledTimes(1);
+        expect(hlsInstances[0].destroy).toHaveBeenCalledTimes(1);
+        expect(emitted).toEqual([]);
+    });
+
     it('uses browser media-type support for HLS manifest codec diagnostics', () => {
         const mediaSourceDescriptor = Object.getOwnPropertyDescriptor(
             globalThis,

@@ -15,7 +15,10 @@ import {
     collectPlaybackCodecs,
 } from '@iptvnator/playback/util';
 import { isBrowserMediaTypeSupported } from '../web-video-support/browser-media-type-support';
-import { HLS_PLAYBACK_CONFIG } from '../web-video-support/hls-playback-config';
+import {
+    HLS_PLAYBACK_CONFIG,
+    shouldFallbackToNativeHls,
+} from '../web-video-support/hls-playback-config';
 import type { WebVideoControlsAdapter } from '../player-controls';
 import type { ShakaModuleLoader } from '../shaka-engine/shaka-module.types';
 import { ShakaVideoSession } from '../shaka-engine/shaka-video-session';
@@ -322,6 +325,18 @@ export class ArtPlayerSourceSession {
     }
 
     private handleHlsError(url: string, data: ErrorData): void {
+        const video = this.player?.video;
+        if (video && shouldFallbackToNativeHls(video, data)) {
+            this.prepareForSourceChange();
+            video.src = url;
+            this.bindControlsSource({ kind: 'native' });
+            const playResult = video.play();
+            if (playResult) {
+                void playResult.catch(() => undefined);
+            }
+            return;
+        }
+
         const issue = classifyHlsPlaybackIssue(
             createHlsPlaybackEvidence(data),
             {

@@ -24,6 +24,10 @@ This document records the current contract for embedded playback in portal detai
 - HLS.js uses a 45-second forward-buffer target capped at 48 MB and conservative
   bandwidth headroom for up-switches, reducing rebuffering on variable links
   while retaining adaptive quality selection.
+- When HLS.js cannot fetch the initial manifest without receiving an HTTP status,
+  browsers that advertise native HLS support get one direct-media fallback. This
+  can bypass provider CORS restrictions on HLS.js requests; HTTP errors do not
+  trigger the fallback.
 
 ## Scope
 

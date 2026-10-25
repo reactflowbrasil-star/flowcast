@@ -36,7 +36,10 @@ import { SeriesPlaybackNavigationControlsComponent } from '../portal-inline-play
 import type { SeriesPlaybackNavigation } from '../portal-inline-player/series-playback-navigation';
 import { ShakaVideoSession } from '../shaka-engine/shaka-video-session';
 import { exitOwnedFullscreen } from '../web-video-support/exit-owned-fullscreen.util';
-import { HLS_PLAYBACK_CONFIG } from '../web-video-support/hls-playback-config';
+import {
+    HLS_PLAYBACK_CONFIG,
+    shouldFallbackToNativeHls,
+} from '../web-video-support/hls-playback-config';
 import {
     clearNativeVideoSources,
     resolveNativeSourceMimeType,
@@ -356,6 +359,16 @@ export class HtmlVideoPlayerComponent implements OnInit, OnChanges, OnDestroy {
     }
 
     private handleHlsError(url: string, data: ErrorData): void {
+        const video = this.videoPlayer.nativeElement;
+        if (shouldFallbackToNativeHls(video, data)) {
+            this.destroyHls();
+            video.src = url;
+            this.bindControlsSource({ kind: 'native' });
+            video.load();
+            this.handlePlayOperation();
+            return;
+        }
+
         emitFatalHlsPlaybackError(
             url,
             data,
