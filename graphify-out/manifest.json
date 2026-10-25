@@ -6797,9 +6797,9 @@
     "semantic_hash": "a02cdad7169efc56c435f89ef811083a"
   },
   "docker/docker-compose.yml": {
-    "mtime": 1792964236.9861147,
-    "seen": 1792966365.1153634,
-    "ast_hash": "d5ae02fb5a0a9088df07c92068807918",
+    "mtime": 1792966399.5135672,
+    "seen": 1792966887.1032717,
+    "ast_hash": "b3663d6349f33ff87abb74dc7a97a503",
     "semantic_hash": ""
   },
   "docker/docker-entrypoint.sh": {
@@ -14634,22 +14634,22 @@
     "semantic_hash": "f0ffd93e801185df0dc6b76205e1de21"
   },
   "libs/ui/playback/src/lib/art-player/art-player-source-session.spec-fixtures.ts": {
-    "mtime": 1792957404.03197,
-    "seen": 1792961203.6436994,
-    "ast_hash": "d5ae5457bc753d9f37ae2a756dd215ff",
-    "semantic_hash": "d5ae5457bc753d9f37ae2a756dd215ff"
+    "mtime": 1792966546.535079,
+    "seen": 1792966887.3796315,
+    "ast_hash": "d76803b2912202f411df461684766c30",
+    "semantic_hash": ""
   },
   "libs/ui/playback/src/lib/art-player/art-player-source-session.spec.ts": {
-    "mtime": 1792957404.03197,
-    "seen": 1792961203.6448889,
-    "ast_hash": "5b5bda86f7d11e6ea8014cf8a352ced9",
-    "semantic_hash": "5b5bda86f7d11e6ea8014cf8a352ced9"
+    "mtime": 1792966546.535079,
+    "seen": 1792966887.3796363,
+    "ast_hash": "c51590ca3b6971adeb00660df7506eda",
+    "semantic_hash": ""
   },
   "libs/ui/playback/src/lib/art-player/art-player-source-session.ts": {
-    "mtime": 1792957404.0480976,
-    "seen": 1792961203.6455069,
-    "ast_hash": "d344a4baafec24ccf9033e919386d0df",
-    "semantic_hash": "d344a4baafec24ccf9033e919386d0df"
+    "mtime": 1792966540.7370374,
+    "seen": 1792966887.3796387,
+    "ast_hash": "2a69e683298b676d9fec5b9ca7665905",
+    "semantic_hash": ""
   },
   "libs/ui/playback/src/lib/art-player/art-player-video-session.spec.ts": {
     "mtime": 1792957404.0564313,
@@ -15126,16 +15126,16 @@
     "semantic_hash": "e66f0cb23bf8994fdfbd69c1a6f28be4"
   },
   "libs/ui/playback/src/lib/html-video-player/html-video-player.component.shared-controls.sources.spec.ts": {
-    "mtime": 1792957404.9424925,
-    "seen": 1792961203.696806,
-    "ast_hash": "e05245e1a413f5aa034880d6fdcfcb5f",
-    "semantic_hash": "e05245e1a413f5aa034880d6fdcfcb5f"
+    "mtime": 1792966546.535079,
+    "seen": 1792966887.3940873,
+    "ast_hash": "4ac50e03ec5e6592f5d542b7faa1110e",
+    "semantic_hash": ""
   },
   "libs/ui/playback/src/lib/html-video-player/html-video-player.component.shared-controls.spec-fixtures.ts": {
-    "mtime": 1792957404.9478688,
-    "seen": 1792961203.6974428,
-    "ast_hash": "b3ec052cb022c74593dd9c37eeaa5b17",
-    "semantic_hash": "b3ec052cb022c74593dd9c37eeaa5b17"
+    "mtime": 1792966546.535079,
+    "seen": 1792966887.3940907,
+    "ast_hash": "4f140155e8fa88f0801805357d0773a2",
+    "semantic_hash": ""
   },
   "libs/ui/playback/src/lib/html-video-player/html-video-player.component.shared-controls.spec.ts": {
     "mtime": 1792957404.9478688,
@@ -15150,10 +15150,10 @@
     "semantic_hash": "768f02db39d2a761b094f2268953dab0"
   },
   "libs/ui/playback/src/lib/html-video-player/html-video-player.component.ts": {
-    "mtime": 1792957404.977936,
-    "seen": 1792961203.6991313,
-    "ast_hash": "2e7d16c0ac85c5c4d96872163aa8e2bf",
-    "semantic_hash": "2e7d16c0ac85c5c4d96872163aa8e2bf"
+    "mtime": 1792966540.7370374,
+    "seen": 1792966887.394456,
+    "ast_hash": "748bacd41d7e1fad46f202c3c88f63bf",
+    "semantic_hash": ""
   },
   "libs/ui/playback/src/lib/playback-diagnostic-panel/playback-diagnostic-evidence-view.util.ts": {
     "mtime": 1792957404.9953911,
@@ -18453,9 +18453,9 @@
     "semantic_hash": ""
   },
   "docker/README.md": {
-    "mtime": 1792964240.685356,
-    "seen": 1792966365.4616888,
-    "ast_hash": "d7a0f431dfd15ec37fbdda79b778f7c6",
+    "mtime": 1792966399.510086,
+    "seen": 1792966887.5042915,
+    "ast_hash": "41dd7b89b82734ef20506e0ba685969a",
     "semantic_hash": ""
   },
   "docs/architecture/category-management.md": {
@@ -18489,9 +18489,9 @@
     "semantic_hash": ""
   },
   "docs/architecture/embedded-inline-playback.md": {
-    "mtime": 1792957389.559269,
-    "seen": 1792961509.1254315,
-    "ast_hash": "0ca42c6dcb4d6421c3494c4747016b51",
+    "mtime": 1792966557.5822263,
+    "seen": 1792966887.505213,
+    "ast_hash": "f8e2154f32ff30d7b71363d7f6ebaec7",
     "semantic_hash": ""
   },
   "docs/architecture/embedded-mpv-native.md": {
@@ -18549,9 +18549,9 @@
     "semantic_hash": ""
   },
   "docs/architecture/pwa-self-hosted.md": {
-    "mtime": 1792964240.6941972,
-    "seen": 1792966365.464863,
-    "ast_hash": "666605e9318e6c8a9dca06743eda02b5",
+    "mtime": 1792966399.5135672,
+    "seen": 1792966887.5069165,
+    "ast_hash": "13fb6a9daec2c30abdde4ba75fa17bf4",
     "semantic_hash": ""
   },
   "docs/architecture/release-pipeline.md": {
@@ -21189,9 +21189,33 @@
     "semantic_hash": ""
   },
   ".changes/docker-pwa-path-prefix.md": {
-    "mtime": 1792964240.6941972,
-    "seen": 1792966365.4504988,
-    "ast_hash": "4cdfb6751b05207976c81e2955a3031a",
+    "mtime": 1792966425.797737,
+    "seen": 1792966887.4922411,
+    "ast_hash": "b24ac6a8999956e9de8d9a0353d4880a",
+    "semantic_hash": ""
+  },
+  "libs/ui/playback/src/lib/web-video-support/hls-playback-config.ts": {
+    "mtime": 1792966540.7317457,
+    "seen": 1792966887.4320552,
+    "ast_hash": "353f194e01c0f09af98eac5a83f6a6a3",
+    "semantic_hash": ""
+  },
+  ".changes/playback-hls-manifest-retries.md": {
+    "mtime": 1792966546.545528,
+    "seen": 1792966887.4922452,
+    "ast_hash": "33f1f1de142107cb9d979e3fe5b0a6ed",
+    "semantic_hash": ""
+  },
+  ".codex-attachments/173312c5-8dcb-4b9f-97f5-1d6c7be151f9/5c219441-1de1-47f7-a454-abb156eb28d3/1000243664.jpg": {
+    "mtime": 1792966401.5321906,
+    "seen": 1792966887.5555332,
+    "ast_hash": "68a845b489917b4361b13e7793500f61",
+    "semantic_hash": ""
+  },
+  ".codex-attachments/173312c5-8dcb-4b9f-97f5-1d6c7be151f9/9a16d0bd-e371-4825-85b3-4dc8ddba3b56/1000243665.jpg": {
+    "mtime": 1792966401.0450754,
+    "seen": 1792966887.5555372,
+    "ast_hash": "004ffd168b08ccaf00bc6b61f1481949",
     "semantic_hash": ""
   }
 }

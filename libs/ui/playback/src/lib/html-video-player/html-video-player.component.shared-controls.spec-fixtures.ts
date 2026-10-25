@@ -81,7 +81,7 @@ export class MockHls {
     });
     readonly destroy = jest.fn(() => lifecycle.push('hls:destroy'));
 
-    constructor() {
+    constructor(readonly config?: unknown) {
         hlsInstances.push(this);
     }
 

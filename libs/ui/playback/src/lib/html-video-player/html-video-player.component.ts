@@ -36,6 +36,7 @@ import { SeriesPlaybackNavigationControlsComponent } from '../portal-inline-play
 import type { SeriesPlaybackNavigation } from '../portal-inline-player/series-playback-navigation';
 import { ShakaVideoSession } from '../shaka-engine/shaka-video-session';
 import { exitOwnedFullscreen } from '../web-video-support/exit-owned-fullscreen.util';
+import { HLS_PLAYBACK_CONFIG } from '../web-video-support/hls-playback-config';
 import {
     clearNativeVideoSources,
     resolveNativeSourceMimeType,
@@ -271,7 +272,7 @@ export class HtmlVideoPlayerComponent implements OnInit, OnChanges, OnDestroy {
                 // containers never reach hls.js: fed an .mkv it raised a
                 // manifest error over media the browser plays by itself.
                 debugHtmlPlayer('Starting HLS playback');
-                const hls = new Hls();
+                const hls = new Hls(HLS_PLAYBACK_CONFIG);
                 this.hls = hls;
                 hls.on(Hls.Events.MANIFEST_PARSED, (_, data) => {
                     if (this.hls !== hls) return;

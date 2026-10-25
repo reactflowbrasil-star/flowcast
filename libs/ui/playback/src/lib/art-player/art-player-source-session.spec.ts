@@ -36,6 +36,11 @@ describe('ArtPlayerSourceSession', () => {
         );
 
         const hls = hlsInstances[0];
+        expect(hls.config).toEqual({
+            manifestLoadingMaxRetry: 3,
+            manifestLoadingRetryDelay: 1_000,
+            manifestLoadingMaxRetryTimeout: 6_000,
+        });
         hls.audioTracks = [{ name: 'Main' }, { name: 'Alternate' }];
         hls.emit(MockHls.Events.AUDIO_TRACKS_UPDATED);
 

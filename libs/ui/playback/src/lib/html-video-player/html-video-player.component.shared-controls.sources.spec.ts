@@ -60,6 +60,11 @@ describe('HtmlVideoPlayerComponent shared controls sources', () => {
 
         component.playChannel(TEST_CHANNEL);
 
+        expect(hlsInstances[0].config).toEqual({
+            manifestLoadingMaxRetry: 3,
+            manifestLoadingRetryDelay: 1_000,
+            manifestLoadingMaxRetryTimeout: 6_000,
+        });
         const attachIndex = lifecycle.indexOf('hls:attachMedia');
         const bindIndex = lifecycle.indexOf(
             `on:${MockHls.Events.AUDIO_TRACKS_UPDATED}`

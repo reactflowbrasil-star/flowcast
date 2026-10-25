@@ -626,6 +626,11 @@ Recoverable events return no terminal diagnostic. Exact codec, decrypt/key
 system, network/timeout/HTTP, and media/mux evidence select the corresponding
 diagnostic; insufficient evidence stays `unknown-playback-error`.
 
+Both web engines use `HLS_PLAYBACK_CONFIG` for initial manifest loads: up to
+three retries, a one-second retry delay, and a six-second maximum retry timeout.
+Only a fatal HLS.js event after those retries reaches the playback diagnostic
+and recovery flow.
+
 HLS.js does not expose a reliable structured CORS, mixed-content, CSP, or
 private-network-access cause. Status zero and generic fetch failures therefore
 remain network/unknown evidence instead of becoming browser-access guesses.

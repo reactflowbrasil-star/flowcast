@@ -55,8 +55,7 @@ export class MockHls {
     subtitleTracks: Array<{ name?: string; lang?: string }> = [];
     subtitleTrack = -1;
     subtitleDisplay = false;
-
-    constructor() {
+    constructor(readonly config?: unknown) {
         hlsInstances.push(this);
     }
 
