@@ -55,6 +55,12 @@ contracts below before changing a subsystem; do not load every document.
 - Validate notes with `pnpm run release:notes:validate`. Release publication has
   separate ordered gates; follow the release-cut skill and release contract.
 
+## Git publication
+
+- At the end of each requested repository update, stage all workspace changes,
+  create a concise commit, and push the current branch to `origin`. If there are
+  no changes to commit or publication fails, report that clearly.
+
 ## Keep guidance small and canonical
 
 - Update the affected subsystem's canonical document after meaningful changes.
@@ -126,3 +132,17 @@ use repository documentation and available CLI discovery.
   to the generator skill or local CLI help.
 
 <!-- nx configuration end-->
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+When the user invokes `$graphify`, use the installed Graphify skill before doing anything else.
+
+Rules:
+- When graphify-out/graph.json exists, run `graphify query "<question>"` before your first grep, search or source-file read for a codebase question, and put this rule in every subagent prompt that explores code. Read raw files only for lines the graph or an earlier read already located. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- Dirty graphify-out/ files are expected after hooks or incremental updates; dirty graph files are not a reason to skip graphify. Only skip graphify if the task is about stale or incorrect graph output, or the user explicitly says not to use it.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code or project documentation, run `graphify update .` to keep the code graph current (AST-only, no API cost).
+- A committed graphify-out/graph.json is rewritten whole on every build, so a large diff to it in a pull request is expected. Do not flag it as churn or suggest skipping the graph rebuild or its hooks.
