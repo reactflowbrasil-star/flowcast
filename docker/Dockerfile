@@ -1,7 +1,7 @@
 # The Nx builds below emit platform-independent JS/static assets. During
 # multi-arch publish builds, keep that heavy build stage on the native builder
 # platform instead of running Node/Nx through QEMU for linux/arm64.
-FROM --platform=$BUILDPLATFORM node:24-alpine AS build
+FROM --platform=$BUILDPLATFORM node:26-alpine AS build
 
 RUN apk add --no-cache python3 make g++ git
 
@@ -29,7 +29,7 @@ ARG PWA_BASE_HREF=/
 RUN pnpm nx build web --configuration=pwa --base-href="${PWA_BASE_HREF}"
 RUN pnpm nx build web-backend
 
-FROM node:24-alpine
+FROM node:26-alpine
 
 RUN apk add --no-cache gettext nginx
 
