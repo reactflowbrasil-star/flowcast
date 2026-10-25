@@ -305,3 +305,4 @@ Web development and PWA use `baseHref="/"`; packaged Electron frontend uses
 `baseHref="./"` so file URLs resolve. In `apps/web/project.json`, `production`
 is the Electron frontend build, `pwa` is the web build, and `development` uses
 the index base. Do not ship the Electron frontend build as a PWA deployment.
+

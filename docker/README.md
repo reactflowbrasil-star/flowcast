@@ -176,3 +176,4 @@ pnpm nx build web-backend
 pnpm nx run web-e2e:e2e -- --project=chromium --grep @self-hosted
 docker compose -f docker/docker-compose.yml config
 ```
+
