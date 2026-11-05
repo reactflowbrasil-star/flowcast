@@ -193,7 +193,7 @@
         "@types/cors": "2.8.19",
         "@types/express": "5.0.6",
         "@types/jest": "^30.0.0",
-        "@types/mocha": "9.0.0",
+        "@types/mocha": "10.0.10",
         "@types/node": "20.19.9",
         "@types/proxy-from-env": "1.0.4",
         "@types/video.js": "7.3.58",
